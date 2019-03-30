@@ -1,6 +1,6 @@
 var express = require('express');
 // var path = require('path');
-var port = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -20,6 +20,6 @@ require('./app/routing/htmlRoutes.js')(app);
 //     res.status(404).end('error');
 // });
 
-app.listen(port, function() {
+app.listen(PORT, function() {
     console.log(`Listening on port ${port}.`);
 });
